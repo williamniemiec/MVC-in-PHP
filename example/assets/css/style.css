@@ -1,0 +1,53 @@
+.anuncio-img {
+    max-height:100px;
+    max-width:300px;
+}
+
+.anuncio-row td {
+    height: 125px;
+    line-height: 125px;
+}
+
+.pass_strength li{
+    transition: background-color 0.3s;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pass_strength_red{
+    background-color: #DC3545;
+}
+
+.pass_strength_green{
+    background-color: #28A745
+}
+
+.pass_strength_yellow{
+    background-color: #FFC107
+}
+
+.galeria img{
+    max-height:200px;
+    max-width:200px;
+}
+
+.galeria {
+    height: 250px;
+    width: 215px;
+}
+
+.upload-file-size{
+    color: green;
+}
+
+.ultimos-anuncio-img{
+    max-height:55px;
+    max-width: 300px;
+}
+
+#slideshow {
+    max-height: 200px;
+}
+

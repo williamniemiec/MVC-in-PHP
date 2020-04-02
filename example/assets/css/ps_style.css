@@ -1,0 +1,19 @@
+.pass_strength li{
+    transition: background-color 0.3s;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pass_strength_red{
+    background-color: #DC3545;
+}
+
+.pass_strength_green{
+    background-color: #28A745
+}
+
+.pass_strength_yellow{
+    background-color: #FFC107
+}
