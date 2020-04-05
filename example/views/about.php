@@ -1,6 +1,7 @@
 <div class='container'>
     <br /><br />
     <div id='accordion'>
+    	<!-- About us section -->
         <div class='card'>
             <div class='card-header'>
                 <button class='btn btn-link' data-toggle='collapse' data-target='#about' aria-controls='about'>About us</button>
@@ -14,6 +15,7 @@
 
         <br />
 
+		<!-- History section -->
         <div class='card'>
             <div class='card-header'>
                 <button class='btn btn-link' data-toggle='collapse' data-target='#hist' aria-controls='hist'>History</button>
@@ -27,6 +29,7 @@
 
         <br />
 
+		<!-- Goal section -->
         <div class='card'>
             <div class='card-header'>
                 <button class='btn btn-link' data-toggle='collapse' data-target='#goal' aria-controls='goal'>Goal</button>
@@ -40,6 +43,7 @@
 
         <br />
         
+        <!-- Sponsors section -->
         <div class='card'>
             <div class='card-header'>
                 <button class='btn btn-link' data-toggle='collapse' data-target='#sponsors' aria-controls='sponsors'>Sponsors</button>

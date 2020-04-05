@@ -60,4 +60,14 @@ class HomeController extends Controller
 
 		$this->loadTemplate("home", $params);
 	}
+	
+	public function wasSuccessfullyRegistered()
+	{
+	    if (!isset($_SESSION['user_successfully_registered']))
+	        return false;
+	    
+        unset($_SESSION['user_successfully_registered']);
+        
+        return true;
+	}
 }

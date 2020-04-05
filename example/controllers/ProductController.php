@@ -7,9 +7,7 @@ use \models\User;
 
 
 class ProductController extends Controller {
-	public function index(){
-
-	}
+	public function index() { }
 
 	public function open($id){
 		$ad = new Ad();
@@ -28,17 +26,22 @@ class ProductController extends Controller {
 			$name = '';
 		}
 
-		$ad = $ad->getAd($id);
-		$images = $ad->getImages($id);
-		$phone = $user->getPhone($ad['id_user']);
+		$adInfo = $ad->getAd($id);
+		
 		$firstTime = true;
 
 		$data = array(
-			'title' => $ad['title'].' - E-commerce',
-			'ad' => $ad,
-			'images' => $images,
+		    'title' => $adInfo['title'].' - E-commerce',
+		    'images' => $ad->getImages($id),
 			'name' => $name,
-			'phone' => $phone,
+		    'ad_title' => $adInfo['title'],
+		    'ad_category' => $adInfo['category'],
+		    'ad_description' => $adInfo['description'],
+		    'ad_state' => $adInfo['state'] == 1 ? "New" : "Used",
+		    'ad_price' => $adInfo['price'],
+		    'user_phone' => $user->getPhone($adInfo['id_user']),
+		    'ad_user_id' => $adInfo['id_user'],
+		    'ad_id' => $adInfo['id'],
 			'firstTime' => $firstTime
 		);
 		$this->loadTemplate("product", $data);

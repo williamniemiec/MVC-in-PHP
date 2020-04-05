@@ -5,13 +5,18 @@ namespace core;
 /**
  * Class responsible for opening views.
  */
-class Controller
+abstract class Controller
 {
     //-----------------------------------------------------------------------
     //        Methods
     //-----------------------------------------------------------------------
+    /**
+     * Main method of the controller. It will be responsible for calling a view.
+     */
+    public abstract function index();
+    
 	/**
-	 * Shows a view
+	 * Shows a view.
 	 *
 	 * @param $viewname View's name
 	 * @param $viewData View's parameters
@@ -23,7 +28,7 @@ class Controller
 	}
 
 	/**
-	 * Shows a view inside a template
+	 * Shows a view inside a template.
 	 *
 	 * @param $viewname View's name
 	 * @param $viewData View's parameters

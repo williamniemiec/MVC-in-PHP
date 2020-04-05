@@ -46,6 +46,9 @@
         
         <script src='<?php echo BASE_URL; ?>assets/js/jquery-3.4.1.min.js'></script>
         <script src='<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js'></script>
+        <script src='<?php echo BASE_URL; ?>assets/js/jquery.mask.js'></script>
+        <script src='<?php echo BASE_URL; ?>assets/js/ps_script.js'></script>
+        <script src='<?php echo BASE_URL; ?>assets/js/script.js'></script>
 
         <?php $this->loadView($viewName, $viewData); ?>
     </body>

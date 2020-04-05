@@ -1,5 +1,5 @@
 $(function(){
-    $('#price').mask('000,000,000.00', {reverse: true});
+    $('input#price').mask('000,000,000.00', {reverse: true});
 
     var fileInput = $('.upload-file');
     var maxSize = fileInput.data('max-size');

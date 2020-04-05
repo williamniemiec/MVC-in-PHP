@@ -65,4 +65,3 @@ class User extends Model {
         return $sql->rowCount();
     }
 }
-?>
