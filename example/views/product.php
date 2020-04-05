@@ -21,14 +21,15 @@
                 
             </div>
         </div>
+        
         <div class='col'>
-            <h1><?php echo $anuncio['titulo']; ?></h1>
-            <h4><?php echo $anuncio['categoria']; ?></h4>
-            <p><?php echo $anuncio['descricao']; ?></p>
-            <p><?php echo $anuncio['estado']; ?></p>
+            <h1><?php echo $ad['title']; ?></h1>
+            <h4><?php echo $ad['category']; ?></h4>
+            <p><?php echo $ad['description']; ?></p>
+            <p><?php echo $ad['state']; ?></p>
             <hr />
-            <h3>R$ <?php echo $anuncio['valor']; ?></h3>
-            <h4><?php echo $telefone; ?></h4>
+            <h3>$ <?php echo $ad['price']; ?></h3>
+            <h4><?php echo $phone; ?></h4>
         </div>
     </div>
 </div>

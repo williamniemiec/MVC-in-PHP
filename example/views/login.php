@@ -6,12 +6,14 @@
             <label for='email'>Email: </label>
             <input id='email' type='text' name='email' class='form-control' />
         </div>
+
         <div class='form-group'>
-            <label for='senha'>Senha: </label>
-            <input id='senha' type='password' name='senha' class='form-control' />
+            <label for='password'>Password: </label>
+            <input id='password' type='password' name='pass' class='form-control' />
         </div>
+        
         <div class='form-group'>
-            <input type='submit' value='Entrar' class='btn btn-outline-primary' />
+            <input type='submit' value='Login' class='btn btn-outline-primary' />
         </div>
     </form>
 </div>

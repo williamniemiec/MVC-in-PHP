@@ -1,3 +1,3 @@
 <?php
-define("ENVIRONMENT", "development");
-//define("ENVIRONMENT", "production");
+define("ENVIRONMENT", "development");		// Local server
+//define("ENVIRONMENT", "production");		// Online server

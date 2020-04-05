@@ -1,9 +1,24 @@
 <?php
-class Model {
+namespace core;
+
+
+/**
+ * All models will have access to a database (if the application has one).
+ */
+class Model 
+{
+    //-----------------------------------------------------------------------
+    //        Attributes
+    //-----------------------------------------------------------------------
 	protected $db;
 
-	public function __construct(){
+
+    //-----------------------------------------------------------------------
+    //        Constructor
+    //-----------------------------------------------------------------------
+	public function __construct ()
+	{
 		global $db;
-		$this->db =  $db;
+		$this->db = $db;
 	}
 }

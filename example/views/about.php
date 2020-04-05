@@ -3,44 +3,50 @@
     <div id='accordion'>
         <div class='card'>
             <div class='card-header'>
-                <button class='btn btn-link' data-toggle='collapse' data-target='#qmSomos' aria-controls='qmSomos'>Quem somos</button>
+                <button class='btn btn-link' data-toggle='collapse' data-target='#about' aria-controls='about'>About us</button>
             </div>
-            <div id='qmSomos' class='collapse show' data-parent='#accordion'>
+            <div id='about' class='collapse show' data-parent='#accordion'>
                 <div class='card-body'>
-                    Algum texto
+                    Some text
                 </div>
             </div>
         </div>
+
         <br />
+
         <div class='card'>
             <div class='card-header'>
-                <button class='btn btn-link' data-toggle='collapse' data-target='#hist' aria-controls='hist'>História</button>
+                <button class='btn btn-link' data-toggle='collapse' data-target='#hist' aria-controls='hist'>History</button>
             </div>
             <div id='hist' class='collapse' data-parent='#accordion'>
                 <div class='card-body'>
-                    Algum texto
+                    Some text
                 </div>
             </div>
         </div>
+
         <br />
+
         <div class='card'>
             <div class='card-header'>
-                <button class='btn btn-link' data-toggle='collapse' data-target='#obj' aria-controls='obj'>Objetivo</button>
+                <button class='btn btn-link' data-toggle='collapse' data-target='#goal' aria-controls='goal'>Goal</button>
             </div>
-            <div id='obj' class='collapse' data-parent='#accordion'>
+            <div id='goal' class='collapse' data-parent='#accordion'>
                 <div class='card-body'>
-                    Algum texto
+                    Some text
                 </div>
             </div>
         </div>
+
         <br />
+        
         <div class='card'>
             <div class='card-header'>
-                <button class='btn btn-link' data-toggle='collapse' data-target='#pat' aria-controls='pat'>Patrocinadores</button>
+                <button class='btn btn-link' data-toggle='collapse' data-target='#sponsors' aria-controls='sponsors'>Sponsors</button>
             </div>
-            <div id='pat' class='collapse' data-parent='#accordion'>
+            <div id='sponsors' class='collapse' data-parent='#accordion'>
                 <div class='card-body'>
-                    Algum texto
+                    Some text
                 </div>
             </div>
         </div>

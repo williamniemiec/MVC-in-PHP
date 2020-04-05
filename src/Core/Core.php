@@ -1,7 +1,7 @@
 <?php
-namespace Core;
+namespace core;
 
-use \Controllers\Controllers;
+use \controllers\NotFoundController;
 
 
 /**
@@ -52,19 +52,23 @@ class Core
 			$currentController = 'HomeController'; 
 			$currentAction = 'index';
 		}
+		
+		$controllerName = $currentController;
+		$currentController = ucfirst($currentController);
+		$currentController = '\\controllers\\'.$currentController;
 
-				
 		// If controller does not exist, set notFoundController as current controller
-		if( !file_exists('controllers/'.$currentController.'.php') || 
-			!method_exists($currentController, $currentAction)){
+		if( !file_exists('controllers/'.$controllerName.'.php') || 
+			!method_exists($currentController, $currentAction)) {
 			$c = new NotFoundController();	
 			$currentAction = 'index';
-		} else {	
+		} else {
 			$c = new $currentController();
 		}
 
 		// Instanciates controller and action
 		$c = new $currentController();
+
 		call_user_func_array(array($c, $currentAction), $params);	// $c->$currentAction($params);
 	}
 }

@@ -1,4 +1,6 @@
 $(function(){
+    $('#price').mask('000,000,000.00', {reverse: true});
+
     var fileInput = $('.upload-file');
     var maxSize = fileInput.data('max-size');
     
@@ -17,7 +19,7 @@ $(function(){
 
                     //console.log(fileInput.get(0).files);
 
-                    $('.modal-body p').html('Tamanho: '+(fileSize/Math.pow(10,6)).toFixed(2)+' MB');
+                    $('.modal-body p').html('Size: '+(fileSize/Math.pow(10,6)).toFixed(2)+' MB');
                 }    
             },150);
         }
@@ -52,13 +54,13 @@ $(function(){
         
     });
 
-    $('#anuncio_form').submit(function(e){
+    $('#ad_form').submit(function(e) {
         if(fileInput.get(0).files.length){
             var fileSize = fileInput.get(0).files[0].size; // in bytes
             if(fileSize>maxSize){
                 console.log(maxSize);
                 console.log(typeof maxSize);
-                alert('Erro! O tamanho dos arquivos é maior do que ' + maxSize/Math.pow(10,6) + ' MB');
+                alert('Error! The file size is larger than ' + maxSize/Math.pow(10,6) + ' MB');
                 return false;
             }
         }

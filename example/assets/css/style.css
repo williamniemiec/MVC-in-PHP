@@ -1,3 +1,7 @@
+div.container {
+    margin-top: 50px;
+}
+
 .anuncio-img {
     max-height:100px;
     max-width:300px;

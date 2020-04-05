@@ -14,10 +14,10 @@ class HomeController extends Controller
     #-----------------------------------------------------------------------
 	public function index ()
 	{
-		$homeViewParams = array(
+		$params = array(
 			
 		);
 
-		$this->loadTemplate("home", $homeViewParams);
+		$this->loadTemplate("home", $params);
 	}
 }

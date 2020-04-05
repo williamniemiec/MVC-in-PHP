@@ -1,47 +1,63 @@
 <?php
-class homeController extends Controller {
-	public function index(){
-		$a = new Anuncio();
-		$u = new Usuario();
-		$c = new Categoria();
+namespace controllers;
+
+use \core\Controller;
+use \models\Ad;
+use \models\User;
+use \models\Category;
+
+
+/**
+ * Main controller. It will be responsible for site's main pase behavior.
+ */
+class HomeController extends Controller 
+{
+    #-----------------------------------------------------------------------
+    #        Methods
+    #-----------------------------------------------------------------------
+	public function index ()
+	{
+		$ad = new Ad();
+		$user = new User();
+		$category = new Category();
 		
-		$filtros = array(
-		    'categoria' => '',
-		    'preco' => '',
-		    'estado' => ''
+		$filters = array(
+		    'category' => '',
+		    'price' => '',
+		    'state' => ''
 		);
 
-		if(isset($_GET['filtro'])){
-		    $filtros = $_GET['filtro'];
+		if(isset($_GET['filter'])){
+		    $filters = $_GET['filter'];
 		}
 
-		$totProd = $a->countAnuncios($filtros);
+		$totFilteredProd = $ad->countAds($filters);
+		$totProd = $ad->countAds();
 
-		// Paginação
-		$p = 1;
-		if(isset($_GET['p']) && !empty($_GET['p'])){
-		    $p = addslashes($_GET['p']);
+		// Pagination
+		$page = 1;
+		if (isset($_GET['p']) && !empty($_GET['p'])) {
+		    $page = addslashes($_GET['p']);
 		}
 
-		if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])){
-			$nome = $u->getName($_SESSION['userID']);
+		if (isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
+			$name = $user->getName($_SESSION['userID']);
 		} else {
-			$nome = '';
+			$name = '';
 		}
 
-		$data = array(
-			'title' => 'Classificados - Home',
-			'nome' => $nome,
-			'filtros' => $filtros,
-			'p' => $p,
+		$params = array(
+			'title' => 'E-commerce - Home',
+			'name' => $name,
+			'filters' => $filters,
+			'page' => $page,
 			'totProd' => $totProd,
-			'totUsuarios' => $u->countUsuarios(),
-			'categorias' => $c->getCategorias(),
-			'anuncios' => $a->getAnuncios($p, 2, $filtros),
-			'totPages' => $a->totPaginas(2, $totProd)
+			'totUsers' => $user->countUsers(),
+			'categories' => $category->getCategories(),
+			'ads' => $ad->getAds($page, 2, $filters),
+			'totPages' => $ad->totPages(2, $totFilteredProd)
 		);
 
-		$this->loadTemplate('home', $data);
+		$this->loadTemplate("home", $params);
 	}
 }
-?>
