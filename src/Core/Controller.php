@@ -1,17 +1,22 @@
 <?php
-namespace Core;
+namespace core;
 
 
 /**
  * Class responsible for opening views.
  */
-class Controller
+abstract class Controller
 {
     //-----------------------------------------------------------------------
     //        Methods
     //-----------------------------------------------------------------------
+    /**
+     * Main method of the controller. It will be responsible for calling a view.
+     */
+    public abstract function index();
+    
 	/**
-	 * Shows a view
+	 * Shows a view.
 	 *
 	 * @param $viewname View's name
 	 * @param $viewData View's parameters
@@ -19,11 +24,11 @@ class Controller
 	public function loadView ($viewName, $viewData = array())
 	{
 		extract($viewData);				// Transforms array keys into variables
-		require 'Views/'.$viewName.'.php';
+		require 'views/'.$viewName.'.php';
 	}
 
 	/**
-	 * Shows a view inside a template
+	 * Shows a view inside a template.
 	 *
 	 * @param $viewname View's name
 	 * @param $viewData View's parameters
@@ -31,6 +36,6 @@ class Controller
 	public function loadTemplate ($viewName, $viewData = array())
 	{
 		extract($viewData);				// Transforms array keys into variables
-		require 'Views/template.php';
+		require 'views/template.php';
 	}
 }

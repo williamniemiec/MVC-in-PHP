@@ -1,21 +1,24 @@
 <?php
-namespace Controllers;
+namespace controllers;
 
-use \Core\Controller;
+use \core\Controller;
 
 
 /**
- * Main controller. It will be responsible for site's main pase behavior.
+ * Main controller. It will be responsible for site's main page behavior.
  */
 class HomeController extends Controller 
 {
-    #-----------------------------------------------------------------------
-    #        Methods
-    #-----------------------------------------------------------------------
+    //-----------------------------------------------------------------------
+    //        Methods
+    //-----------------------------------------------------------------------
+    /*
+     @Override
+     */
 	public function index ()
 	{
 		$params = array(
-			
+			'title' => 'Home'
 		);
 
 		$this->loadTemplate("home", $params);

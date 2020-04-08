@@ -1,19 +1,15 @@
 <?php
-namespace Models;
+namespace models;
 
-use \Core\Model;
+use core\Model;
 
 
 /**
- * Model class example.
+ * Model1 description.
  */
-class Model1 extends Model 
+class Model1 extends Model
 {
-	//-----------------------------------------------------------------------
-    //        Constructor
     //-----------------------------------------------------------------------
-	public function __construct ()
-	{
-		parent::__construct();		// Calls superclass constructor
-	}
+    //        Methods
+    //-----------------------------------------------------------------------
 }

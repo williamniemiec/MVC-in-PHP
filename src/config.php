@@ -1,20 +1,20 @@
 <?php
 require 'environment.php';
 
-$config = array();
 global $db;
 
+$config = array();
 
-if (ENVIRONMENT == 'production') {
-	define("BASE_URL", "http://www.name_of_site.com/");
-	$config['dbname'] = 'name_of_online_db';
+if (ENVIRONMENT == 'development') {
+	define("BASE_URL", "http://localhost/");
+	$config['dbname'] = 'name_of_db';
 	$config['host'] = '127.0.0.1';
 	$config['charset'] = 'utf8';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 } else {
-	define("BASE_URL", "http://localhost/");
-	$config['dbname'] = 'name_of_local_db';
+	define("BASE_URL", "http://mySite.com/");
+	$config['dbname'] = '';
 	$config['host'] = '127.0.0.1';
 	$config['charset'] = 'utf8';
 	$config['dbuser'] = 'root';
@@ -22,11 +22,7 @@ if (ENVIRONMENT == 'production') {
 }
 
 try {
-	$db = new PDO(
-		"mysql:dbname=".$config['dbname'].";host=".$config['host'].";charset=".$config['charset'], 
-		$config['dbuser'], 
-		$config['dbpass']
-	);
-} catch(PDOException $e){
-	echo "DATABASE CONNECTION ERROR: ".$e->getMessage();
+	$db = new \PDO("mysql:dbname=".$config['dbname'].";host=".$config['host'].";charset=".$config['charset'], $config['dbuser'], $config['dbpass']);
+} catch(\PDOException $e){
+	'"DATABASE CONNECTION ERROR: '.$e->getMessage();
 }

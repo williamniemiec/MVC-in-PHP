@@ -1,7 +1,7 @@
 <?php
-namespace Controllers;
+namespace controllers;
 
-use \Core\Controller;
+use \core\Controller;
 
 
 /**
@@ -9,11 +9,18 @@ use \Core\Controller;
  */
 class NotFoundController extends Controller 
 {
-    #-----------------------------------------------------------------------
-    #        Methods
-    #-----------------------------------------------------------------------
+    //-----------------------------------------------------------------------
+    //        Methods
+    //-----------------------------------------------------------------------
+    /*
+     @Override
+     */
 	public function index()
 	{
-		$this->loadView('404');
+        $params = array(
+
+        );
+
+		$this->loadTemplate('404', $params);
 	}
 }
