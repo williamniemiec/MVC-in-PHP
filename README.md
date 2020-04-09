@@ -1,7 +1,7 @@
 # MVC in PHP
 ![](https://github.com/williamniemiec/MVC-in-PHP/blob/master/media/logo/logo.jpg)
 
-This project aims to provide an MVC PHP framework for you to use in your projects. If you want to see an example there is a complete example [here]() about an e-commerce website.
+This project aims to provide an MVC PHP framework for you to use in your projects. If you want to see an example there is a complete example [here](https://github.com/williamniemiec/wp_eCommerce) about an e-commerce website.
 
 <hr />
 
