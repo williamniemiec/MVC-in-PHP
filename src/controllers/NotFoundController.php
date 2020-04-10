@@ -13,8 +13,8 @@ class NotFoundController extends Controller
     //        Methods
     //-----------------------------------------------------------------------
     /*
-     @Override
-     */
+      @Override
+    */
 	public function index()
 	{
         $params = array(
