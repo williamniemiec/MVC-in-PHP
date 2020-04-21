@@ -1,7 +1,7 @@
 <?php
 namespace core;
 
-use \controllers\NotFoundController;
+use controllers\NotFoundController;
 
 
 /**
