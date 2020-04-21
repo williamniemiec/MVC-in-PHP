@@ -1,8 +1,7 @@
 <?php
 require 'environment.php';
 
-global $db;
-
+global $config;
 $config = array();
 
 if (ENVIRONMENT == 'development') {
@@ -14,15 +13,9 @@ if (ENVIRONMENT == 'development') {
 	$config['dbpass'] = '';
 } else {
 	define("BASE_URL", "http://mySite.com/");
-	$config['dbname'] = '';
+	$config['dbname'] = 'name_of_db';
 	$config['host'] = '127.0.0.1';
 	$config['charset'] = 'utf8';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
-}
-
-try {
-	$db = new \PDO("mysql:dbname=".$config['dbname'].";host=".$config['host'].";charset=".$config['charset'], $config['dbuser'], $config['dbpass']);
-} catch(\PDOException $e){
-	'"DATABASE CONNECTION ERROR: '.$e->getMessage();
 }
