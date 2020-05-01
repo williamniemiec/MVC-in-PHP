@@ -104,6 +104,7 @@ The MVC structure is in `src` folder.
 | 	config.py 			| `File`		| Website configuration file (Database and website location)
 | 	environment.php 	| `File`		| File responsible for defining which environment is in use
 | 	index.php 			| `File`		| File responsible for starting the website
+| 	robots.txt 			| `File`		| Determines which files [crawlers](https://en.wikipedia.org/wiki/Web_crawler) can see
 
 ## Environment
 Indicates which environment is in use. There are two:
