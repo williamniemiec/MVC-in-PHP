@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="A website made using MVC-in-PHP framework" />
+        <meta name="description" content="<?php echo $description; ?>" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0" />
         <meta name="keywords" content="<?php echo implode(',', $keywords); ?>" />
         <meta name="robots" content="<?php echo $robots; ?>" />

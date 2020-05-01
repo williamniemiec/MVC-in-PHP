@@ -22,6 +22,7 @@ class NotFoundController extends Controller
 
         $params = array(
             'title' => '404 - Page not found',
+            'description' => "",
             'keywords' => $keywords,
             'robots' => 'noindex'
         );

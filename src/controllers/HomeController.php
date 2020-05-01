@@ -22,6 +22,7 @@ class HomeController extends Controller
 
 		$params = array(
 			'title' => 'Home',
+			'description' => "A website made using MVC-in-PHP framework",
 			'keywords' => $keywords,
 			'robots' => 'index'
 		);
