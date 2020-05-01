@@ -1,3 +1,9 @@
-# Global
+# Ignores MVC files
 User-agent: *
-Allow: /
+Disallow: /assets
+Disallow: /controllers
+Disallow: /models
+Disallow: /views
+Disallow: /core
+Disallow: /config.php
+Disallow: /environment.php
