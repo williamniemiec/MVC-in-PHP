@@ -17,13 +17,10 @@ class HomeController extends Controller
      */
 	public function index ()
 	{
-		// Keywords of home page
-		$keywords = array('home', 'mvc-in-php');
-
 		$params = array(
 			'title' => 'Home',
 			'description' => "A website made using MVC-in-PHP framework",
-			'keywords' => $keywords,
+			'keywords' => array('home', 'mvc-in-php'),
 			'robots' => 'index'
 		);
 
