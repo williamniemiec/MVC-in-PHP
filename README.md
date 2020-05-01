@@ -45,6 +45,15 @@ The views have all html content, with as little php as possible. To use the info
 
 ### Controllers
 Controllers have to extend [Controller class](https://github.com/williamniemiec/MVC-in-PHP/blob/master/src/core/Controller.php). Also, they must use `namespace controllers`. All controllers must be in `controllers` folder. This class has 2 methods for showing a view and another that will be invoked depending on the url provided.
+Also, if you call a view using `loadTemplate` function, you must send the following attributes to the view:
+- title
+- description
+- keywords (useful for SEO)
+- robots ('index' if the page should be indexed by SEO; 'noindex' otherwise)
+
+#### Example - Home controller
+![controller_args](https://github.com/williamniemiec/MVC-in-PHP/blob/master/media/example/controller_args.png?raw=true)
+
 
 ## How this framework works?
 When a url is sent to the server, it will parse it to identify three components:
