@@ -17,8 +17,13 @@ class HomeController extends Controller
      */
 	public function index ()
 	{
+		// Keywords of home page
+		$keywords = array('home', 'mvc-in-php');
+
 		$params = array(
-			'title' => 'Home'
+			'title' => 'Home',
+			'keywords' => $keywords,
+			'robots' => 'index'
 		);
 
 		$this->loadTemplate("home", $params);
